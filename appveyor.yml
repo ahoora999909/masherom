@@ -1,6 +1,3 @@
-environment:
-  expat: 'c:\projects\Expat 2.2.5\'
-
 install:
   - ps: cd c:\projects
   - ps: '[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12'
@@ -11,6 +8,7 @@ install:
 configuration: Debug
 
 environment:
+  expat: 'c:\projects\Expat 2.2.5\'
   matrix:
     # Visual Studio 2017 x64
     - GENERATOR: Visual Studio 15 2017 Win64
