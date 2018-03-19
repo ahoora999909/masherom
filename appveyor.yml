@@ -3,7 +3,8 @@ install:
   - ps: '[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12'
   - ps: Invoke-WebRequest https://github.com/dasher-project/dasher/files/1824036/Expat.2.2.5.zip -OutFile expat.zip
   - ps: 7z x ./expat.zip
-  - ps: cd '.\Expat 2.2.5\'
+  - ps: ls c:\projects\dasher\Src\Win32
+  - ps: ls c:\projects\dasher\Src\Win32\Dasher.sln
 
 configuration: Debug
 
