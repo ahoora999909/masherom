@@ -3,7 +3,7 @@ environment:
 
 install:
   - ps: cd c:\projects
-  - ps: [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+  - ps: '[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12'
   - ps: Invoke-WebRequest https://github.com/dasher-project/dasher/files/1824036/Expat.2.2.5.zip -OutFile expat.zip
   - ps: 7z ./expat.zip
   - ps: cd '.\Expat 2.2.5\'
