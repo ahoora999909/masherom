@@ -1,0 +1,25 @@
+environment:
+  expat: 'c:\projects\Expat 2.2.5\'
+
+install:
+  - ps: cd c:\projects
+  - ps: [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+  - ps: Invoke-WebRequest https://github.com/dasher-project/dasher/files/1824036/Expat.2.2.5.zip -OutFile expat.zip
+  - ps: 7z ./expat.zip
+  - ps: cd '.\Expat 2.2.5\'
+
+configuration: Debug
+
+environment:
+  matrix:
+    # Visual Studio 2017 x64
+    - GENERATOR: Visual Studio 15 2017 Win64
+      PLATFORM: x64
+      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+
+before_build:
+  - echo Moving to Win32 folder...
+  - cd c:\projects\dasher\Src\Win32
+
+build:
+  project: Dasher.sln              # path to Visual Studio solution or project
