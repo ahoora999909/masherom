@@ -11,9 +11,9 @@ configuration: Debug
 environment:
   expat: 'c:\projects\Expat 2.2.5\'
   matrix:
-    # Visual Studio 2017 x64
-    - GENERATOR: Visual Studio 15 2017 Win64
-      PLATFORM: x64
+    # Visual Studio 2017 Win32
+    - GENERATOR: Visual Studio 15 2017
+      PLATFORM: Win32
       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
 
 before_build:
