@@ -21,4 +21,4 @@ before_build:
   - cd c:\projects\dasher\Src\Win32
 
 build:
-  project: Dasher.sln              # path to Visual Studio solution or project
+  project: c:\projects\dasher\Src\Win32\Dasher.sln              # path to Visual Studio solution or project
